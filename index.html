@@ -25,5 +25,58 @@
         </div>
     </div>
    </div>
+   <!-- about -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"><img src="images/DALL·E 2024-09-19 05.22.30 - A simple and professional 'About Me' section design for a portfolio. The image features a solid black background with the text 'About Me' centered in .webp" ></div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Skill 1 </span><br> s1,s2</li>
+                        <li><span>Skill 2 </span><br> s1,s2</li>
+                        <li><span>Skill 3 </span><br> s1,s2</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>jan 2024-june 2024 </span><br> backend intern at groww(stock brokrage company),bangalore</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2024 </span><br> BTech(IT) from BIT ,Mesra (8.36 cgpa)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <script>
+    
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+   </script>
 </body>
 </html>
